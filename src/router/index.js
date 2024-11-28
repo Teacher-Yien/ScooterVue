@@ -6,7 +6,7 @@ import ElectricScooters from '../views/ElectricScooters.vue'
 import { createRouter, createWebHistory } from 'vue-router';  
 
 const routes = [  
-    { path: '/home', name: 'Home', component: Home },  
+    { path: '/', name: 'Home', component: Home },  
     { path: '/shop-all', name: 'ShopAll', component: ShopAll },  
     { path: '/electric-scooters', name: 'ElectricScooters', component: ElectricScooters },  
     { path: '/accessories', name: 'Accessories', component: () => import('../views/Accessories.vue') },  

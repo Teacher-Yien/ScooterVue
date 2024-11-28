@@ -11,6 +11,7 @@
 									height="100%"
 							/>
 					</a>
+					<span class="position-absolute top-0 start-0 mx-5 mt-4 p-2 px-3 translate-middle badge rounded-pill sale-badge">Sale!</span>
 					<div class="overlay">
 							<div class="icon-buttons">
 									<button class="icon-button" @click="addToCart(product)">

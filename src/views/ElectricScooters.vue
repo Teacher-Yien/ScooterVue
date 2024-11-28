@@ -5,7 +5,7 @@
 					<!-- Breadcrumb -->
 					<div class="col-lg-6 col-md-6 col-sm-12 mb-3">
 							<div class="breadcrumb">
-									<router-link class="text-decoration-none text-secondary" to="/home">Home</router-link>
+									<router-link class="text-decoration-none text-secondary" to="/">Home</router-link>
 									<span class="mx-1">/</span>
 									<span class="text-muted">Shop-All</span>
 							</div>
@@ -110,7 +110,7 @@
 	 <!-- Offcanvas Sidebar -->
 		<filter-sidebar
       @apply-filters="handleFilters"
-						:search-query="searchQuery"
+					
     />
 
 
