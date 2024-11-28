@@ -1,0 +1,119 @@
+.card{  
+	border: none;  
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative; /* Ensure overlay is positioned correctly */  
+}  
+
+.image-container {  
+	position: relative;  
+}
+.image-container img{
+	transform: scale(1);
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+}
+.image-container:hover img{
+	transform: scale(1.02);
+}
+
+.card-img-top {  
+	object-fit: cover;  
+}  
+
+.overlay {  
+	position: absolute;  
+	top: 0;  
+	left: 0;  
+	right: 0;  
+	bottom: 0;  
+	/* background-color: rgba(0, 0, 0, 0.6);   */
+	display: flex;  
+	justify-content: end;  
+	padding: 25px;  
+	opacity: 0;  
+	transition: opacity 0.3s ease;  
+}  
+
+.card:hover  .overlay {  
+	opacity: 1;  
+}  
+
+.sale-badge {  
+	background-color: #ff0000;  
+	/* background-color: #fff; */
+	box-shadow: 0px 1px 2px #000;
+	/* color: #000;   */
+	padding: 5px 10px;  
+	border-radius: 20px;  
+	font-weight: bold;  
+	font-size: 16px;  
+}  
+
+.icon-buttons {  
+	display: flex;
+	flex-direction: column;
+	gap: 10px;  
+}  
+
+.icon-button {  
+	background: none;  
+	border: none;  
+	color: #545353;  
+	font-size: 20px;  
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: 1px 1px 1px #000;
+	cursor: pointer;  
+	transition: transform 0.2s;  
+}  
+
+.icon-button:hover {  
+	transform: scale(1.1);  
+}  
+
+.card-body {  
+	padding: 15px; /* Add some padding to the card body */  
+}  
+
+.card-title {  
+	font-size: 20px;
+	font-weight: 900;
+}  
+
+.star-group {  
+	font-size: 20px; /* Adjust star size */  
+	color: #f39c12; /* Star color */  
+}  
+
+.price {  
+	margin-top: 10px;  
+	font-size: 18px; /* Font size for prices */  
+}  
+
+.price del {  
+	color: #999; /* Color for original price */  
+}  
+
+.price ins {  
+	color: #e44d26; /* Color for current price */  
+	font-weight: bold; /* Bold the current price */  
+}  
+.spinner-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1050;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: #0000002c;
+}
+
+.spinner-border {
+	width: 3rem;
+	height: 3rem;
+}
