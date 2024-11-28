@@ -28,7 +28,7 @@
 							</ul>
 
 							<!-- Centered Logo -->
-							<router-link to="/" class="navbar-brand text-center">
+							<router-link to="/home" class="navbar-brand text-center">
 									<div style="line-height: 1; font-size: 0.8rem; color: gray;">ELECTRIC</div>
 									<strong style="font-size: 1.5rem; font-weight: bold;">SCOOTERS</strong>
 							</router-link>
@@ -60,7 +60,7 @@
 															{{ cartStore.cartItems.length }}
 													</span>
 											</a>
-											<router-link to="/profile" class="btn btn-link"><i class="bi bi-person"></i></router-link>
+											<router-link to="/home" class="btn btn-link"><i class="bi bi-person"></i></router-link>
 									</li>
 							</ul>
 					</div>

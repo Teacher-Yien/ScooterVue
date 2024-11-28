@@ -1,4 +1,4 @@
-import { reactive, computed, watchEffect, onMounted } from 'vue';
+import { reactive, watchEffect } from 'vue';
 
 export const cartStore = reactive({
   cartItems: [],
@@ -7,7 +7,7 @@ export const cartStore = reactive({
   addItem(product) {
     const existingItem = this.cartItems.find((item) => item.id === product.id);
     if (existingItem) {
-      existingItem.quantity += product.quantity; // Add the selected quantity
+      existingItem.quantity += product.quantity;
     } else {
       this.cartItems.push({ ...product, quantity: product.quantity });
     }
@@ -25,7 +25,7 @@ export const cartStore = reactive({
 
   // Load cart items from localStorage
   loadCart() {
-    const savedCart = localStorage.getItem("cart");
+    const savedCart = localStorage.getItem("cartStore");
     if (savedCart) {
       try {
         this.cartItems = JSON.parse(savedCart);
@@ -42,19 +42,13 @@ export const cartStore = reactive({
 
   // Calculate the grand total
   getGrandTotal() {
-    return this.getSubtotal(); // You can add taxes, discounts, etc., here if needed
+    return this.getSubtotal();
   }
-});
-
-// Use `onMounted` to load the cart items when the component is mounted
-onMounted(() => {
-  cartStore.loadCart(); // Ensure data is loaded after store is initialized
 });
 
 // Save cart items to localStorage whenever they change
 watchEffect(() => {
   if (cartStore.cartItems.length > 0) {
-    localStorage.setItem("cart", JSON.stringify(cartStore.cartItems));
+    localStorage.setItem("cartStore", JSON.stringify(cartStore.cartItems));
   }
 });
-
