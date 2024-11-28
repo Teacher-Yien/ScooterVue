@@ -14,7 +14,7 @@ const routes = [
     { path: '/contact', name: 'Contact', component: () => import('../views/Contact.vue') },  
     { path: '/viewCart', name: 'Cart', component: () => import('../views/ViewCart.vue') },  
     { path: '/checkout', name: 'checkout', component: () => import('../views/Checkout.vue') },
-    { path: '/product', name: 'checkout', component: () => import('../views/Product.vue') },
+    { path: '/product', name: 'product', component: () => import('../views/Product.vue') },
 ];  
 
 const router = createRouter({  
